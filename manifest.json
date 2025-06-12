@@ -1,13 +1,13 @@
 {
   "name": "Portfolio Saya",
   "short_name": "Portfolio",
-  "start_url": "/WEBMOBILEPORTOFOLIO/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#1e1e2f",
-  "theme_color": "#ffa500",
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
   "icons": [
     {
-      "src": "/WEBMOBILEPORTOFOLIO/images/saya.jpg",
+      "src": "./images/saya.jpg",
       "sizes": "192x192",
       "type": "image/png"
     }
