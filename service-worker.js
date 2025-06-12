@@ -15,13 +15,16 @@ const urlsToCache = [
 // Install service worker
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache);
-    }).catch((error) => {
-      console.error("Caching failed:", error);
-    })
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        return cache.addAll(urlsToCache);
+      })
+      .catch((err) => {
+        console.error("❌ Caching failed:", err);
+      })
   );
 });
+
 
 // Fetch requests
 self.addEventListener("fetch", (event) => {
