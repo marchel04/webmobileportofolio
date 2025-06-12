@@ -8,9 +8,9 @@ const urlsToCache = [
   "./images/css.jpg",
   "./images/html.jpg",
   "./images/java.jpg",
-  "./images/aws.png",
+  "./images/saya.jpg",
   "./images/Pemrograman_komputer.png",
-  "./images/saya.jpg"
+  "./images/aws.png"
 ];
 
 // Install service worker
