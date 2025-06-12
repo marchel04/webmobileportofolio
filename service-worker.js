@@ -8,11 +8,10 @@ const urlsToCache = [
   "./images/css.jpg",
   "./images/html.jpg",
   "./images/java.jpg",
-  "./images/saya.jpg",
+  "./images/aws.png",
   "./images/Pemrograman_komputer.png",
-  "./images/aws.png"
+  "./images/saya.jpg"
 ];
-
 // Install service worker
 self.addEventListener("install", (event) => {
   event.waitUntil(
