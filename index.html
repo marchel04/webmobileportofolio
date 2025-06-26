@@ -274,7 +274,7 @@
 
     // Mendaftarkan file service-worker.js sebagai service worker
     navigator.serviceWorker.register('./service-worker.js') /* Mendaftarkan service worker agar halaman bisa bekerja secara offline dan memiliki fitur seperti cache. */
-      .then(reg => console.log("✅ SW registered")) /* Jika berhasil, tampilkan log ke console */
+      .then(reg => console.log(" SW registered")) /* Jika berhasil, tampilkan log ke console */
       .catch(err => console.error("SW failed", err)); /* Jika gagal, tampilkan error ke console */
   }
 </script>
