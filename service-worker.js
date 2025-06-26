@@ -2,7 +2,6 @@ const CACHE_NAME = "portfolio-cache-v1";
 // Nama cache yang digunakan. Versi ini penting untuk pengelolaan cache lama dan baru.
 
 const urlsToCache = [
-  "./",
   "./index.html",
   "./project.html",
   "./manifest.json",
