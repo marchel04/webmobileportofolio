@@ -2,15 +2,15 @@ const CACHE_NAME = "portfolio-cache-v1";
 // Nama cache yang digunakan. Versi ini penting untuk pengelolaan cache lama dan baru.
 
 const urlsToCache = [
-  "/index.html",
-  "/project.html",
-  "/manifest.json",
-  "/images/css.jpg",
-  "/images/html.jpg",
-  "/images/java.jpg",
-  "/images/aws.png",
-  "/images/Pemrograman_Komputer.png",
-  "/images/saya.jpg"
+  "./index.html",
+  "./project.html",
+  "./manifest.json",
+  "./images/css.jpg",
+  "./images/html.jpg",
+  "./images/java.jpg",
+  "./images/aws.png",
+  "./images/Pemrograman_Komputer.png",
+  "./images/saya.jpg"
 ];
 // Daftar file yang akan disimpan di cache agar bisa diakses secara offline
 
