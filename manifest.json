@@ -1,15 +1,15 @@
 {
-  "name": "Portfolio Saya", /* Nama lengkap aplikasi yang akan ditampilkan di layar home saat pengguna install */
-  "short_name": "Portfolio", /* Nama pendek yang digunakan jika ruang terbatas, misalnya di layar utama perangkat */
-  "start_url": "./index.html", /* Halaman awal (entry point) ketika aplikasi dibuka dari shortcut */
-  "display": "standalone", /* Tipe tampilan aplikasi: 'standalone' artinya tanpa bar browser, seperti aplikasi native */
-  "background_color": "#ffffff", /* Warna latar belakang saat splash screen muncul saat membuka aplikasi */
-  "theme_color": "#333333", /* Warna tema utama untuk status bar dan UI browser saat PWA dijalankan */
+  "name": "Portfolio Saya",
+  "short_name": "Portfolio",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
   "icons": [
     {
-      "src": "./images/saya.jpg", /* Path menuju ikon yang akan digunakan saat aplikasi di-install ke perangkat */
-      "sizes": "192x192", /* Ukuran ikon (wajib minimal 192x192 untuk PWA) */
-      "type": "image/png" /* Tipe file dari ikon tersebut */
+      "src": "images/saya.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
     }
   ]
 }
