@@ -19,9 +19,9 @@ self.addEventListener('install', event => {
       .then(cache => {
         return cache.addAll(assets);
       })
-      .then(() => console.log('✅ Semua file berhasil dicache.'))
+      .then(() => console.log('Semua file berhasil dicache.'))
       .catch(error => {
-        console.error('❌ Gagal mencache:', error);
+        console.error(' Gagal mencache:', error);
       })
   );
 });
