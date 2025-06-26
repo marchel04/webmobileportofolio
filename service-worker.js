@@ -1,16 +1,15 @@
 const cacheName = 'portfolio-cache-v1';
 const assetsToCache = [
-  './',
-  './index.html',
-  './project.html',
-  './manifest.json',
-  './style.css',
-  './images/saya.jpg',
-  './images/aws.png',
-  './images/Pemrograman_Komputer.png',
-  './images/html.jpg',
-  './images/css.jpg',
-  './images/java.jpg'
+  '/index.html',
+  '/project.html',
+  '/manifest.json',
+  '/style.css',
+  '/images/saya.jpg',
+  '/images/aws.png',
+  '/images/Pemrograman_Komputer.png',
+  '/images/html.jpg',
+  '/images/css.jpg',
+  '/images/java.jpg'
 ];
 
 self.addEventListener('install', event => {
