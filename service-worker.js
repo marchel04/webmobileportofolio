@@ -28,22 +28,20 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request)
-      .then((response) => {
-        return response || fetch(event.request);
-      })
+      .then((response) => response || fetch(event.request))
   );
 });
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
         cacheNames.map((name) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
         })
-      );
-    })
+      )
+    )
   );
 });
