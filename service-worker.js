@@ -1,47 +1,34 @@
-const CACHE_NAME = "portfolio-cache-v1";
-
-const urlsToCache = [
-  "/index.html",
-  "/project.html",
-  "/manifest.json",
-  "/images/css.jpg",
-  "/images/html.jpg",
-  "/images/java.jpg",
-  "/images/aws.png",
-  "/images/Pemrograman_Komputer.png",
-  "/images/saya.jpg"
+const cacheName = 'portfolio-v1';
+const assets = [
+  '/',
+  '/portfolio/index.html',
+  '/portfolio/project.html',
+  '/portfolio/style.css',
+  '/portfolio/manifest.json',
+  '/portfolio/images/saya.jpg',
+  '/portfolio/images/aws.png',
+  '/portfolio/images/Pemrograman_Komputer.png',
+  '/portfolio/images/html.jpg',
+  '/portfolio/images/css.jpg',
+  '/portfolio/images/java.jpg'
 ];
 
-self.addEventListener("install", (event) => {
+self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log("📦 Caching files:", urlsToCache);
-        return cache.addAll(urlsToCache);
+    caches.open(cacheName)
+      .then(cache => {
+        return cache.addAll(assets);
       })
-      .catch((err) => {
-        console.error("❌ Caching failed:", err);
+      .catch(error => {
+        console.error('Gagal cache:', error);
       })
   );
 });
 
-self.addEventListener("fetch", (event) => {
+self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request)
-      .then((response) => response || fetch(event.request))
-  );
-});
-
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) =>
-      Promise.all(
-        cacheNames.map((name) => {
-          if (name !== CACHE_NAME) {
-            return caches.delete(name);
-          }
-        })
-      )
-    )
+    caches.match(event.request).then(cached => {
+      return cached || fetch(event.request);
+    })
   );
 });
