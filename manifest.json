@@ -1,7 +1,7 @@
 {
   "name": "Portfolio Saya", /* Nama lengkap aplikasi yang akan ditampilkan di layar home saat pengguna install */
   "short_name": "Portfolio", /* Nama pendek yang digunakan jika ruang terbatas, misalnya di layar utama perangkat */
-  "start_url": "./index.html", /* Halaman awal (entry point) ketika aplikasi dibuka dari shortcut */
+  "start_url": "/index.html", /* Halaman awal (entry point) ketika aplikasi dibuka dari shortcut */
   "display": "standalone", /* Tipe tampilan aplikasi: 'standalone' artinya tanpa bar browser, seperti aplikasi native */
   "background_color": "#ffffff", /* Warna latar belakang saat splash screen muncul saat membuka aplikasi */
   "theme_color": "#333333", /* Warna tema utama untuk status bar dan UI browser saat PWA dijalankan */
