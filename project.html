@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project | Portfolio</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icons/icon-192x192.png">
+  <link rel="icon" href="./images/saya.jpg">
   <style>
     body {
       margin: 0;
@@ -13,43 +13,52 @@
       background-color: #1e1e2f;
       color: #fff;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       background-color: #262638;
       padding: 1rem 2rem;
       border-bottom: 2px solid #ffa500;
     }
+
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
       color: #ffa500;
     }
+
     nav a {
       margin-left: 1.5rem;
       text-decoration: none;
       color: #fff;
       font-weight: 500;
     }
+
     nav a:hover {
       color: #ffa500;
     }
+
     .container {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 0 2rem;
     }
+
     h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
       color: #ffa500;
     }
+
     .projects {
       display: grid;
       gap: 2rem;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
+
     .project-card {
       background-color: #2c2c3f;
       border: 1px solid #ffa50055;
@@ -57,30 +66,58 @@
       border-radius: 12px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
     .project-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 12px rgba(255, 165, 0, 0.2);
     }
+
     .project-card img {
       width: 100%;
       border-radius: 8px;
+      object-fit: cover;
+      height: 150px;
     }
+
     .project-title {
       margin-top: 0.8rem;
       font-size: 1.2rem;
       font-weight: bold;
     }
+
     .project-desc {
       margin-top: 0.5rem;
       font-size: 0.95rem;
       color: #ccc;
     }
+
     footer {
       margin-top: 4rem;
       text-align: center;
       padding: 1rem;
       border-top: 1px solid #444;
       color: #888;
+    }
+
+    /* Media Queries untuk Responsif Tambahan */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 0.5rem 0 0 0;
+        display: inline-block;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .project-desc {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -94,23 +131,29 @@
   </header>
 
   <div class="container">
-    <h1>Penjelasan Tentang Program</h1>
+    <h1>Penjelasan Tentang program</h1>
     <p>Penjelasan Program</p>
     <div class="projects">
       <div class="project-card">
-        <img src="images/css.jpg" alt="Project 1">
+        <img src="./images/css.jpg" alt="Project 1">
         <div class="project-title">CSS</div>
-        <div class="project-desc">CSS adalah bahasa pemrograman berbasis aturan untuk styling halaman web.</div>
+        <div class="project-desc">
+          CSS adalah bahasa pemrograman berbasis aturan untuk menambahkan gaya dan tata letak halaman web.
+        </div>
       </div>
       <div class="project-card">
-        <img src="images/html.jpg" alt="Project 2">
+        <img src="./images/html.jpg" alt="Project 2">
         <div class="project-title">HTML</div>
-        <div class="project-desc">HTML adalah bahasa markup untuk menyusun struktur halaman web.</div>
+        <div class="project-desc">
+          HTML adalah bahasa markup untuk menyusun struktur dasar halaman web.
+        </div>
       </div>
       <div class="project-card">
-        <img src="images/java.jpg" alt="Project 3">
+        <img src="./images/java.jpg" alt="Project 3">
         <div class="project-title">Java</div>
-        <div class="project-desc">Java adalah bahasa OOP multi-platform.</div>
+        <div class="project-desc">
+          Java adalah bahasa pemrograman OOP yang dapat berjalan di berbagai platform (multi-platform).
+        </div>
       </div>
     </div>
   </div>
@@ -121,9 +164,9 @@
 
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js')
-        .then(reg => console.log("✅ Service Worker registered"))
-        .catch(err => console.error("❌ Service Worker failed", err));
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log("SW registered"))
+        .catch(err => console.error("SW failed", err));
     }
   </script>
 </body>
